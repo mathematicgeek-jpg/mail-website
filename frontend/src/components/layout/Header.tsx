@@ -82,14 +82,14 @@ export default function Header() {
             {profile && (
               <Link
                 href="/#profile-dashboard"
-                className="flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-cyan/15 text-xs font-bold hover:border-gold hover:scale-105 transition-all text-white"
+                className="flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-xs font-bold hover:border-gold hover:scale-105 transition-all text-[#111827]"
               >
                 <span className="flex items-center">
-                  🔥 <span className="ml-1 text-slate-100">{profile.streak}</span>
+                  🔥 <span className="ml-1 text-[#374151]">{profile.streak}</span>
                 </span>
-                <span className="w-[1px] h-3 bg-slate-800"></span>
-                <span className="flex items-center text-gold">
-                  ⭐ <span className="ml-1 text-slate-100">Lvl {profile.level}</span>
+                <span className="w-[1px] h-3 bg-slate-300"></span>
+                <span className="flex items-center text-[#b45309]">
+                  ⭐ <span className="ml-1 text-[#374151]">Lvl {profile.level}</span>
                 </span>
               </Link>
             )}
@@ -134,14 +134,14 @@ export default function Header() {
             </Link>
           ))}
           {profile && (
-            <div className="px-3 py-2 border-t border-gray-800 flex justify-between items-center text-sm font-bold text-white">
+            <div className="px-3 py-2 border-t border-slate-200 flex justify-between items-center text-sm font-bold text-[#111827]">
               <span>Learning Progress:</span>
               <div className="flex space-x-3">
                 <span className="flex items-center">
-                  🔥 <span className="ml-1 text-slate-100">{profile.streak} days</span>
+                  🔥 <span className="ml-1 text-[#374151]">{profile.streak} days</span>
                 </span>
-                <span className="flex items-center text-gold">
-                  ⭐ <span className="ml-1 text-slate-100">Lvl {profile.level}</span>
+                <span className="flex items-center text-[#b45309]">
+                  ⭐ <span className="ml-1 text-[#374151]">Lvl {profile.level}</span>
                 </span>
               </div>
             </div>
