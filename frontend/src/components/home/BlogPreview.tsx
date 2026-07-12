@@ -110,7 +110,7 @@ export default function BlogPreview() {
             Array.from({ length: 3 }).map((_, idx) => (
               <div
                 key={idx}
-                className="bg-[#ffffff] border border-cyan/10 rounded-3xl h-[420px] animate-pulse flex flex-col justify-between p-6"
+                className="bg-[#ffffff] border border-slate-200 rounded-3xl h-[420px] animate-pulse flex flex-col justify-between p-6 shadow-sm"
               >
                 <div className="space-y-4">
                   <div className="bg-slate-200 h-40 rounded-2xl"></div>
@@ -132,7 +132,7 @@ export default function BlogPreview() {
               return (
                 <article
                   key={post.slug}
-                  className="bg-[#ffffff] border border-cyan/10 rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between group hover:scale-[1.02] hover:border-cyan/35 transition-all duration-300 h-[460px]"
+                  className="bg-[#ffffff] border border-slate-200 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between group hover:scale-[1.02] hover:border-cyan/35 transition-all duration-300 h-[460px]"
                 >
                   <div>
                     {/* Featured Image */}

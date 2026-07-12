@@ -156,7 +156,7 @@ export default function InteractiveTrick() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Controls Column */}
           <div className="md:col-span-2 space-y-6">
-            <div className="bg-slate-900/60 border border-cyan/10 p-4 rounded-3xl space-y-2">
+            <div className="bg-slate-900 border border-slate-200 p-4 rounded-3xl space-y-2 shadow-sm">
               <span className="text-xs text-cyan font-bold block mb-2 px-1 uppercase tracking-wider">
                 Choose Math Formula
               </span>
@@ -185,7 +185,7 @@ export default function InteractiveTrick() {
             </div>
 
             {/* Input field card */}
-            <div className="bg-[#ffffff] border border-cyan/10 p-5 rounded-3xl shadow-lg space-y-4">
+            <div className="bg-[#ffffff] border border-slate-200 p-5 rounded-3xl shadow-sm space-y-4">
               <div>
                 <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
                   {activeTrick === "multiply_11" ? "Enter any 2-digit number:" : "Enter number ending in 5:"}
@@ -213,7 +213,7 @@ export default function InteractiveTrick() {
 
           {/* Explanation Output Column */}
           <div className="md:col-span-3">
-            <div className="bg-slate-900/40 border border-cyan/10 rounded-3xl p-6 min-h-[300px] flex flex-col justify-between shadow-xl backdrop-blur-sm">
+            <div className="bg-slate-900 border border-slate-200 rounded-3xl p-6 min-h-[300px] flex flex-col justify-between shadow-sm backdrop-blur-sm">
               
               {/* If no calculation triggered yet */}
               {steps.length === 0 && (

@@ -122,7 +122,7 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Enter full name"
-                className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-cyan transition-colors"
+                className="w-full bg-slate-900 border border-slate-200 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-colors"
               />
             </div>
 
@@ -139,7 +139,7 @@ export default function ContactForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="Enter phone number (e.g. +91 9876543210)"
-                className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-cyan transition-colors"
+                className="w-full bg-slate-900 border border-slate-200 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-colors"
               />
             </div>
           </div>
@@ -157,7 +157,7 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Enter email (optional)"
-                className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-cyan transition-colors"
+                className="w-full bg-slate-900 border border-slate-200 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-colors"
               />
             </div>
 
@@ -173,7 +173,7 @@ export default function ContactForm() {
                 value={formData.city}
                 onChange={handleChange}
                 placeholder="Enter city"
-                className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-cyan transition-colors"
+                className="w-full bg-slate-900 border border-slate-200 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-colors"
               />
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function ContactForm() {
                 required
                 value={formData.studentClass}
                 onChange={handleChange}
-                className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan transition-colors"
+                className="w-full bg-slate-900 border border-slate-200 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-colors"
               >
                 <option value="" disabled className="text-gray-600">Select Class</option>
                 {CLASSES.map((cls) => (
@@ -210,7 +210,7 @@ export default function ContactForm() {
                 required
                 value={formData.board}
                 onChange={handleChange}
-                className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan transition-colors"
+                className="w-full bg-slate-900 border border-slate-200 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-colors"
               >
                 <option value="" disabled className="text-gray-600">Select Board</option>
                 {BOARDS.map((bd) => (
@@ -230,7 +230,7 @@ export default function ContactForm() {
                 required
                 value={formData.preferredMode}
                 onChange={handleChange}
-                className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan transition-colors"
+                className="w-full bg-slate-900 border border-slate-200 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-colors"
               >
                 <option value="" disabled className="text-gray-600">Select Mode</option>
                 <option value="Online Live Sessions">Online Live Sessions</option>
@@ -252,7 +252,7 @@ export default function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Tell Ma'am if you need help with algebraic identities, trigonometry, Vedic speed multiplication tricks, board exam strategy, etc."
-              className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-cyan transition-colors resize-y"
+              className="w-full bg-slate-900 border border-slate-200 rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-cyan focus:ring-2 focus:ring-cyan/20 transition-colors resize-y"
             ></textarea>
           </div>
 

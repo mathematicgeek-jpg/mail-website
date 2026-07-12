@@ -71,7 +71,7 @@ export default function GamifiedDashboard() {
         {/* Dashboard grid layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1: Player Card */}
-          <div className="bg-[#ffffff] border border-cyan/10 rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+          <div className="bg-[#ffffff] border border-slate-200 rounded-3xl p-6 shadow-sm flex flex-col justify-between">
             <div>
               {/* Profile Name Header */}
               <div className="flex items-center justify-between mb-6">
@@ -147,7 +147,7 @@ export default function GamifiedDashboard() {
           </div>
 
           {/* Column 2: XP Progression Bar */}
-          <div className="bg-[#ffffff] border border-cyan/10 rounded-3xl p-6 shadow-xl flex flex-col justify-between md:col-span-2">
+          <div className="bg-[#ffffff] border border-slate-200 rounded-3xl p-6 shadow-sm flex flex-col justify-between md:col-span-2">
             <div>
               <div className="flex justify-between items-center mb-4">
                 <h4 className="text-base font-bold text-slate-900">Level Progression</h4>

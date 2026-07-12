@@ -101,7 +101,7 @@ export default function Hero() {
 
           {/* Right Column: Calculations Demo Animation Widget */}
           <div className="lg:col-span-5 w-full flex justify-center">
-            <div className="bg-slate-900/50 border border-cyan/10 rounded-3xl p-6 shadow-2xl backdrop-blur-sm w-full max-w-md relative overflow-hidden flex flex-col justify-between h-[360px]">
+            <div className="bg-slate-900 border border-slate-200 rounded-3xl p-6 shadow-lg backdrop-blur-sm w-full max-w-md relative overflow-hidden flex flex-col justify-between h-[360px]">
               
               {/* Header Selector tabs */}
               <div className="flex justify-between items-center mb-6">

@@ -162,7 +162,7 @@ export default function LearningPath() {
 
           {/* Details Card Panel Column */}
           <div className="lg:col-span-3">
-            <div className="bg-[#ffffff] border border-cyan/10 rounded-3xl p-8 shadow-2xl relative overflow-hidden transition-all duration-300 min-h-[380px] flex flex-col justify-between">
+            <div className="bg-[#ffffff] border border-slate-200 rounded-3xl p-8 shadow-sm relative overflow-hidden transition-all duration-300 min-h-[380px] flex flex-col justify-between">
               
               {/* Top Accent glow */}
               <div className={`absolute top-0 left-0 right-0 h-1.5 ${
