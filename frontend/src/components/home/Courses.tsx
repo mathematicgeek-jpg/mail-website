@@ -81,17 +81,17 @@ export default function Courses() {
                   </div>
                 </div>
 
-                <p className="text-gray-300 text-sm mb-6 leading-relaxed">
+                <p className="text-gray-300 text-base mb-6 leading-relaxed">
                   {course.description}
                 </p>
 
                 <div className="border-t border-gray-800 pt-6 mb-8">
-                  <span className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">
+                  <span className="block text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">
                     Course Inclusions:
                   </span>
                   <ul className="space-y-3">
                     {course.features.map((feature) => (
-                      <li key={feature} className="flex items-center space-x-3 text-xs text-gray-400">
+                      <li key={feature} className="flex items-center space-x-3 text-sm text-gray-400">
                         <div className={`h-1.5 w-1.5 rounded-full ${
                           isCyan ? "bg-cyan" : "bg-gold"
                         }`}></div>
@@ -103,10 +103,10 @@ export default function Courses() {
 
                 <Link
                   href="/#contact"
-                  className={`w-full inline-flex items-center justify-center py-3 rounded-2xl text-xs font-bold transition-all ${
+                  className={`w-full inline-flex items-center justify-center py-3.5 rounded-2xl text-sm font-bold transition-all ${
                     isCyan
-                      ? "bg-cyan/10 border border-cyan/20 text-cyan hover:bg-cyan hover:text-slate-950"
-                      : "bg-gold/10 border border-gold/20 text-gold hover:bg-gold hover:text-slate-950"
+                      ? "bg-cyan/10 border border-cyan/20 text-[#0e7490] hover:bg-cyan hover:text-[#111827]"
+                      : "bg-gold/10 border border-gold/20 text-[#b45309] hover:bg-gold hover:text-[#111827]"
                   }`}
                 >
                   <span>Schedule Trial Session</span>

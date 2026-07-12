@@ -56,7 +56,7 @@ export default function GamifiedDashboard() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/20 text-gold text-xs font-semibold uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/20 text-[#b45309] text-xs font-semibold uppercase tracking-widest mb-3">
             <Sparkles className="h-3.5 w-3.5 animate-spin-slow" />
             <span>Interactive Student Hub</span>
           </div>
@@ -151,7 +151,7 @@ export default function GamifiedDashboard() {
             <div>
               <div className="flex justify-between items-center mb-4">
                 <h4 className="text-base font-bold text-slate-900">Level Progression</h4>
-                <span className="text-xs text-cyan font-bold bg-cyan/5 px-2.5 py-1 rounded-full">
+                <span className="text-xs text-[#0e7490] font-bold bg-cyan/5 px-2.5 py-1 rounded-full">
                   {currentLevelXp} / 100 XP to Level {profile.level + 1}
                 </span>
               </div>
@@ -166,12 +166,12 @@ export default function GamifiedDashboard() {
 
               {/* Learning Insights Info */}
               <div className="mt-6 space-y-4">
-                <div className="flex items-start space-x-3 text-xs bg-slate-50 border border-slate-100 p-4 rounded-2xl">
-                  <Award className="h-5 w-5 text-gold shrink-0 mt-0.5" />
+                <div className="flex items-start space-x-3 text-sm bg-slate-50 border border-slate-100 p-4 rounded-2xl text-gray-400">
+                  <Award className="h-5 w-5 text-[#b45309] shrink-0 mt-0.5" />
                   <div>
                     <h5 className="font-bold text-slate-900">How to earn points:</h5>
                     <p className="text-gray-400 mt-1 leading-relaxed">
-                      Completing math tricks solver gives <span className="font-semibold text-cyan">+15 XP</span>. Answering interactive games correctly grants <span className="font-semibold text-cyan">+20 XP</span> per question. Practice daily to raise your streak!
+                      Completing math tricks solver gives <span className="font-semibold text-[#0e7490]">+15 XP</span>. Answering interactive games correctly grants <span className="font-semibold text-[#0e7490]">+20 XP</span> per question. Practice daily to raise your streak!
                     </p>
                   </div>
                 </div>

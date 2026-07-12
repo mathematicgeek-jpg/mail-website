@@ -61,7 +61,7 @@ export default function ExitIntentModal() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
           {/* Pitch Panel */}
           <div className="md:col-span-2 space-y-4 text-center md:text-left">
-            <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-gold/10 border border-gold/20 text-gold text-xs font-semibold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-gold/10 border border-gold/20 text-[#b45309] text-xs font-semibold uppercase tracking-wider mb-2">
               <Gift className="h-4 w-4" />
               <span>Special Offer</span>
             </div>
@@ -70,11 +70,11 @@ export default function ExitIntentModal() {
               Before You Go...
             </h3>
             
-            <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
-              Get our premium <span className="text-gold font-semibold">Vedic Math Shortcuts PDF Cheat Sheet</span> absolutely FREE!
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+              Get our premium <span className="text-[#b45309] font-semibold">Vedic Math Shortcuts PDF Cheat Sheet</span> absolutely FREE!
             </p>
 
-            <ul className="space-y-2 text-left text-xs text-gray-300">
+            <ul className="space-y-2 text-left text-sm text-gray-300">
               <li className="flex items-center space-x-2">
                 <Sparkles className="h-4 w-4 text-cyan shrink-0" />
                 <span>Calculate 10x faster mentally</span>

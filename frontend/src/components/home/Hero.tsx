@@ -64,7 +64,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <Link
                 href="/#contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-2xl bg-gradient-to-r from-cyan to-gold text-slate-950 hover:opacity-95 shadow-xl transition-all hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-2xl bg-gradient-to-r from-cyan to-gold text-[#111827] hover:opacity-95 shadow-xl transition-all hover:scale-105"
               >
                 <Calendar className="mr-2 h-5 w-5" />
                 Start Free Trial Class
@@ -74,9 +74,9 @@ export default function Hero() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-cyan/20 text-base font-semibold rounded-2xl text-cyan bg-slate-900/50 hover:bg-slate-900 transition-all hover:scale-105 hover:border-cyan"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-slate-200 text-base font-semibold rounded-2xl text-[#111827] bg-[#FFFFFF] hover:bg-slate-50 transition-all hover:scale-105"
               >
-                <MessageSquare className="mr-2 h-5 w-5 text-emerald-400" />
+                <MessageSquare className="mr-2 h-5 w-5 text-emerald-600" />
                 Chat on WhatsApp
               </a>
             </div>
@@ -150,24 +150,24 @@ export default function Hero() {
                     <div className="flex items-center space-x-6 justify-center">
                       <div className="text-center">
                         <span className="text-sm font-bold text-white block">98</span>
-                        <span className="text-xs text-red font-semibold block mt-1">-2 (from 100)</span>
+                        <span className="text-sm text-red font-semibold block mt-1">-2 (from 100)</span>
                       </div>
-                      <span className="text-slate-500 text-lg font-bold">×</span>
+                      <span className="text-slate-700 text-lg font-bold">×</span>
                       <div className="text-center">
                         <span className="text-sm font-bold text-white block">97</span>
-                        <span className="text-xs text-red font-semibold block mt-1">-3 (from 100)</span>
+                        <span className="text-sm text-red font-semibold block mt-1">-3 (from 100)</span>
                       </div>
                     </div>
                     
-                    <div className="space-y-2 text-center text-xs border-t border-cyan/10 pt-4 max-w-xs mx-auto">
+                    <div className="space-y-2 text-center text-sm border-t border-cyan/10 pt-4 max-w-xs mx-auto">
                       <p className="text-slate-300">
                         Left: <span className="text-white font-bold">98 - 3 = 95</span>
                       </p>
                       <p className="text-slate-300">
                         Right: <span className="text-white font-bold">-2 × -3 = 06</span>
                       </p>
-                      <p className="text-base font-bold text-emerald-400 font-mono mt-2">
-                        Result: <span className="text-gold glow-text-gold font-extrabold text-lg">9506</span> (Takes 2s!)
+                      <p className="text-base font-bold text-[#059669] font-mono mt-2">
+                        Result: <span className="text-[#b45309] glow-text-gold font-extrabold text-lg">9506</span> (Takes 2s!)
                       </p>
                     </div>
                   </div>

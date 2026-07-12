@@ -260,9 +260,9 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold text-gray-950 rounded-lg group bg-gradient-to-br from-cyan to-gold group-hover:from-cyan group-hover:to-gold hover:text-white focus:ring-4 focus:outline-none focus:ring-cyan-800 disabled:opacity-50"
+            className="w-full relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold text-[#111827] rounded-lg group bg-gradient-to-br from-cyan to-gold group-hover:from-cyan group-hover:to-gold focus:ring-4 focus:outline-none focus:ring-cyan-800 disabled:opacity-50"
           >
-            <span className="w-full relative px-5 py-3 transition-all ease-in duration-75 bg-gradient-to-r from-cyan to-gold rounded-md group-hover:bg-opacity-0 flex items-center justify-center space-x-2 cursor-pointer">
+            <span className="w-full relative px-5 py-3 transition-all ease-in duration-75 bg-gradient-to-r from-cyan to-gold rounded-md group-hover:bg-opacity-0 flex items-center justify-center space-x-2 cursor-pointer text-[#111827]">
               {loading ? (
                 <>
                   <Loader2 className="animate-spin h-5 w-5" />

@@ -118,40 +118,40 @@ export default function LearningPath() {
                   onClick={() => setSelectedStage(stage)}
                   className={`group relative z-10 flex items-center justify-center h-16 w-16 rounded-full border-2 transition-all duration-300 ${
                     isSelected
-                      ? "bg-slate-900 border-gold shadow-[0_0_15px_rgba(217,119,6,0.5)] scale-110"
+                      ? "bg-[#111827] border-gold shadow-[0_0_15px_rgba(217,119,6,0.3)] scale-110"
                       : isUnlocked
-                      ? "bg-slate-950 border-cyan hover:border-gold hover:scale-105 shadow-md shadow-cyan/10"
-                      : "bg-slate-900/90 border-slate-700 text-slate-500 scale-95 hover:border-slate-600"
+                      ? "bg-[#ffffff] border-cyan hover:border-gold hover:scale-105 shadow-md shadow-cyan/10"
+                      : "bg-slate-100 border-slate-300 text-gray-500 scale-95"
                   }`}
                 >
                   <Icon className={`h-6 w-6 ${
                     isSelected
                       ? "text-gold"
                       : isUnlocked
-                      ? "text-cyan group-hover:text-gold"
-                      : "text-slate-500"
+                      ? "text-[#0891b2] group-hover:text-gold"
+                      : "text-gray-500"
                   }`} />
 
                   {/* Absolute Badge locks */}
                   <span className={`absolute -top-1.5 -right-1.5 h-5 w-5 rounded-full flex items-center justify-center border text-[9px] font-bold ${
                     isUnlocked
-                      ? "bg-slate-950 border-emerald-400 text-emerald-400"
-                      : "bg-slate-950 border-slate-700 text-slate-500"
+                      ? "bg-[#059669] border-[#059669] text-[#ffffff]"
+                      : "bg-slate-200 border-slate-300 text-gray-500"
                   }`}>
                     {isUnlocked ? <Unlock className="h-2.5 w-2.5" /> : <Lock className="h-2.5 w-2.5" />}
                   </span>
 
                   {/* Float title tooltip */}
-                  <span className={`absolute whitespace-nowrap text-xs font-semibold px-2 py-1 rounded-md border bg-slate-950 z-20 transition-all ${
+                  <span className={`absolute whitespace-nowrap text-xs font-semibold px-2 py-1 rounded-md border bg-slate-50 z-20 transition-all ${
                     idx % 2 === 0
                       ? "right-20 group-hover:translate-x-1"
                       : "left-20 group-hover:-translate-x-1"
                   } ${
                     isSelected
-                      ? "text-gold border-gold"
+                      ? "text-[#b45309] border-[#b45309]"
                       : isUnlocked
                       ? "text-white border-cyan/30"
-                      : "text-slate-500 border-slate-800"
+                      : "text-gray-500 border-slate-200"
                   }`}>
                     {stage.title}
                   </span>
@@ -176,13 +176,13 @@ export default function LearningPath() {
                   <div>
                     <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider ${
                       selectedStage.levelRequired <= userLevel
-                        ? "bg-cyan/10 text-cyan border border-cyan/20"
-                        : "bg-slate-100 text-slate-400 border border-slate-200"
+                        ? "bg-cyan/10 text-[#0e7490] border border-cyan/20"
+                        : "bg-slate-100 text-gray-500 border border-slate-200"
                     }`}>
                       {selectedStage.tag}
                     </span>
                     <h3 className="text-2xl font-bold text-slate-900 mt-3">{selectedStage.title}</h3>
-                    <p className="text-sm font-semibold text-gold mt-1">{selectedStage.subtitle}</p>
+                    <p className="text-sm font-semibold text-[#b45309] mt-1">{selectedStage.subtitle}</p>
                   </div>
                   
                   <div className={`h-12 w-12 rounded-2xl flex items-center justify-center shrink-0 border ${

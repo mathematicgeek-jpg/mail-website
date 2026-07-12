@@ -157,7 +157,7 @@ export default function InteractiveTrick() {
           {/* Controls Column */}
           <div className="md:col-span-2 space-y-6">
             <div className="bg-slate-900 border border-slate-200 p-4 rounded-3xl space-y-2 shadow-sm">
-              <span className="text-xs text-cyan font-bold block mb-2 px-1 uppercase tracking-wider">
+              <span className="text-sm text-[#0e7490] font-bold block mb-2 px-1 uppercase tracking-wider">
                 Choose Math Formula
               </span>
               
@@ -165,8 +165,8 @@ export default function InteractiveTrick() {
                 onClick={() => handleTrickChange("multiply_11")}
                 className={`w-full text-left px-4 py-3.5 rounded-2xl text-sm font-semibold transition-all border ${
                   activeTrick === "multiply_11"
-                    ? "bg-gradient-to-r from-cyan/15 to-cyan/5 border-cyan text-cyan shadow-sm"
-                    : "bg-transparent border-transparent text-gray-400 hover:text-white hover:bg-slate-900"
+                    ? "bg-gradient-to-r from-cyan/15 to-cyan/5 border-cyan text-[#0e7490] shadow-sm"
+                    : "bg-transparent border-transparent text-gray-400 hover:text-[#111827] hover:bg-slate-100"
                 }`}
               >
                 🔢 Multiply 2-Digit by 11
@@ -176,8 +176,8 @@ export default function InteractiveTrick() {
                 onClick={() => handleTrickChange("square_5")}
                 className={`w-full text-left px-4 py-3.5 rounded-2xl text-sm font-semibold transition-all border ${
                   activeTrick === "square_5"
-                    ? "bg-gradient-to-r from-gold/15 to-gold/5 border-gold text-gold shadow-sm"
-                    : "bg-transparent border-transparent text-gray-400 hover:text-white hover:bg-slate-900"
+                    ? "bg-gradient-to-r from-gold/15 to-gold/5 border-gold text-[#b45309] shadow-sm"
+                    : "bg-transparent border-transparent text-gray-400 hover:text-[#111827] hover:bg-slate-100"
                 }`}
               >
                 📐 Square Ending in 5
@@ -187,7 +187,7 @@ export default function InteractiveTrick() {
             {/* Input field card */}
             <div className="bg-[#ffffff] border border-slate-200 p-5 rounded-3xl shadow-sm space-y-4">
               <div>
-                <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                <label className="block text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">
                   {activeTrick === "multiply_11" ? "Enter any 2-digit number:" : "Enter number ending in 5:"}
                 </label>
                 <input
@@ -195,7 +195,7 @@ export default function InteractiveTrick() {
                   value={inputVal}
                   onChange={(e) => setInputVal(e.target.value)}
                   placeholder={activeTrick === "multiply_11" ? "e.g. 43" : "e.g. 75"}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3.5 text-lg text-slate-900 font-bold focus:outline-none focus:ring-2 focus:ring-cyan"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-base text-slate-900 font-bold focus:outline-none focus:ring-2 focus:ring-cyan"
                 />
               </div>
 
@@ -203,7 +203,7 @@ export default function InteractiveTrick() {
 
               <button
                 onClick={calculateTrick}
-                className="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-2xl bg-slate-900 text-white hover:bg-slate-800 font-semibold text-sm transition-all shadow-md active:scale-95"
+                className="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-2xl bg-[#111827] text-slate-100 hover:bg-slate-800 font-semibold text-sm transition-all shadow-md active:scale-95"
               >
                 <Play className="h-4 w-4 mr-2 text-cyan fill-cyan" />
                 Solve Step-by-Step
@@ -226,7 +226,7 @@ export default function InteractiveTrick() {
               {/* Step list */}
               {steps.length > 0 && (
                 <div className="space-y-6 flex-grow">
-                  <span className="text-xs font-bold text-cyan uppercase tracking-widest block mb-4 border-b border-cyan/10 pb-2">
+                  <span className="text-sm font-bold text-[#0e7490] uppercase tracking-widest block mb-4 border-b border-cyan/10 pb-2">
                     Vedic Math Solution Process
                   </span>
                   
@@ -236,12 +236,12 @@ export default function InteractiveTrick() {
                       className="flex items-start space-x-3 text-sm animate-float"
                       style={{ animationDelay: `${idx * 0.15}s` }}
                     >
-                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-cyan/15 text-cyan font-bold text-xs shrink-0 mt-0.5">
+                      <div className="flex items-center justify-center h-6 w-6 rounded-full bg-cyan/15 text-[#0e7490] font-bold text-sm shrink-0 mt-0.5">
                         {idx + 1}
                       </div>
                       <div className="space-y-1">
                         <p className="text-gray-300 font-medium">{step.text}</p>
-                        <code className="block bg-slate-950 px-3 py-1.5 rounded-lg text-emerald-400 font-bold font-mono text-xs max-w-max border border-slate-900">
+                        <code className="block bg-slate-950 px-3 py-1.5 rounded-lg text-[#059669] font-bold font-mono text-sm max-w-max border border-slate-900">
                           {step.expression}
                         </code>
                       </div>
@@ -268,7 +268,7 @@ export default function InteractiveTrick() {
                       setSteps([]);
                       setResult(null);
                     }}
-                    className="p-3 bg-slate-950/60 text-gray-400 hover:text-white rounded-2xl border border-slate-900 transition-colors"
+                    className="p-3 bg-[#111827] text-slate-100 hover:bg-slate-800 rounded-2xl border border-slate-950 transition-colors"
                     title="Clear calculation"
                   >
                     <RefreshCw className="h-4 w-4" />

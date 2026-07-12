@@ -34,14 +34,14 @@ export default function About() {
           
           {/* Left Column: Teacher Details */}
           <div className="space-y-6">
-            <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-cyan/10 border border-cyan/20 text-cyan text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-cyan/10 border border-cyan/20 text-[#0e7490] text-xs font-semibold uppercase tracking-wider">
               <Star className="h-3.5 w-3.5 fill-cyan" />
               <span>Meet the Mentor</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
               Aarti Agarwal
-              <span className="block text-lg font-medium text-gold mt-1 glow-text-gold">
+              <span className="block text-lg font-medium text-[#b45309] mt-1 glow-text-gold">
                 Mathematics Merit Score Expert
               </span>
             </h2>
@@ -71,8 +71,8 @@ export default function About() {
             
             <div className="mb-6">
               <h3 className="text-xl font-bold text-white mb-2">Our Methodology</h3>
-              <p className="text-xs text-gray-400">
-                How our signature <span className="text-cyan font-semibold">G.R.A.F. Teaching Framework</span> ensures student success:
+              <p className="text-sm text-gray-400">
+                How our signature <span className="text-[#0e7490] font-semibold">G.R.A.F. Teaching Framework</span> ensures student success:
               </p>
             </div>
 
@@ -85,7 +85,7 @@ export default function About() {
                     </div>
                     <h4 className="text-sm font-bold text-white">{step.title}</h4>
                   </div>
-                  <p className="text-xs text-gray-400 leading-relaxed">
+                  <p className="text-sm text-gray-400 leading-relaxed">
                     {step.desc}
                   </p>
                 </div>

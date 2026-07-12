@@ -60,7 +60,7 @@ export default function WhyChooseUs() {
               <h3 className="text-base font-bold text-white mb-2 group-hover:text-cyan transition-colors">
                 {diff.title}
               </h3>
-              <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-400 leading-relaxed">
                 {diff.desc}
               </p>
             </div>

@@ -150,7 +150,7 @@ export default function Header() {
             <Link
               href="/#contact"
               onClick={() => setIsOpen(false)}
-              className="flex w-full items-center justify-center py-2.5 px-4 rounded-md bg-gradient-to-r from-cyan to-gold text-sm font-semibold text-gray-950 hover:opacity-90 transition-opacity"
+              className="flex w-full items-center justify-center py-2.5 px-4 rounded-md bg-gradient-to-r from-cyan to-gold text-sm font-semibold text-[#111827] hover:opacity-90 transition-opacity"
             >
               Book Free Demo
             </Link>
