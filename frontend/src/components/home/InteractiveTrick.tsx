@@ -195,7 +195,7 @@ export default function InteractiveTrick() {
                   value={inputVal}
                   onChange={(e) => setInputVal(e.target.value)}
                   placeholder={activeTrick === "multiply_11" ? "e.g. 43" : "e.g. 75"}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-4 py-3 text-base text-[#111827] font-bold focus:outline-none focus:ring-2 focus:ring-cyan"
+                  className="w-full bg-slate-900 border border-slate-200 rounded-2xl px-4 py-3 text-base text-white placeholder-gray-500 font-bold focus:outline-none focus:ring-2 focus:ring-cyan/20 focus:border-cyan transition-colors"
                 />
               </div>
 
