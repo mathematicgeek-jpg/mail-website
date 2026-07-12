@@ -83,7 +83,7 @@ export default function GamifiedDashboard() {
                         value={tempName}
                         onChange={(e) => setTempName(e.target.value)}
                         maxLength={15}
-                        className="bg-slate-50 border border-cyan/30 rounded-xl px-3 py-1.5 text-slate-900 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-cyan w-full"
+                        className="bg-slate-50 border border-cyan/30 rounded-xl px-3 py-1.5 text-[#111827] text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-cyan w-full"
                       />
                       <button
                         onClick={handleSaveName}
@@ -94,7 +94,7 @@ export default function GamifiedDashboard() {
                     </div>
                   ) : (
                     <div className="flex items-center justify-between">
-                      <h3 className="text-xl font-bold text-slate-900 truncate">
+                      <h3 className="text-xl font-bold text-[#111827] truncate">
                         {profile.playerName}
                       </h3>
                       <button
@@ -113,7 +113,7 @@ export default function GamifiedDashboard() {
               <div className="grid grid-cols-2 gap-4 mt-4">
                 <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4 text-center">
                   <span className="text-3xl block">🔥</span>
-                  <span className="block text-xl font-extrabold text-slate-900 mt-1">
+                  <span className="block text-xl font-extrabold text-[#111827] mt-1">
                     {profile.streak} {profile.streak === 1 ? "Day" : "Days"}
                   </span>
                   <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">
@@ -123,7 +123,7 @@ export default function GamifiedDashboard() {
                 
                 <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4 text-center">
                   <span className="text-3xl block">⭐</span>
-                  <span className="block text-xl font-extrabold text-slate-900 mt-1">
+                  <span className="block text-xl font-extrabold text-[#111827] mt-1">
                     Level {profile.level}
                   </span>
                   <span className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">
@@ -150,7 +150,7 @@ export default function GamifiedDashboard() {
           <div className="bg-[#ffffff] border border-slate-200 rounded-3xl p-6 shadow-sm flex flex-col justify-between md:col-span-2">
             <div>
               <div className="flex justify-between items-center mb-4">
-                <h4 className="text-base font-bold text-slate-900">Level Progression</h4>
+                <h4 className="text-base font-bold text-[#111827]">Level Progression</h4>
                 <span className="text-xs text-[#0e7490] font-bold bg-cyan/5 px-2.5 py-1 rounded-full">
                   {currentLevelXp} / 100 XP to Level {profile.level + 1}
                 </span>
@@ -169,7 +169,7 @@ export default function GamifiedDashboard() {
                 <div className="flex items-start space-x-3 text-sm bg-slate-50 border border-slate-100 p-4 rounded-2xl text-gray-400">
                   <Award className="h-5 w-5 text-[#b45309] shrink-0 mt-0.5" />
                   <div>
-                    <h5 className="font-bold text-slate-900">How to earn points:</h5>
+                    <h5 className="font-bold text-[#111827]">How to earn points:</h5>
                     <p className="text-gray-400 mt-1 leading-relaxed">
                       Completing math tricks solver gives <span className="font-semibold text-[#0e7490]">+15 XP</span>. Answering interactive games correctly grants <span className="font-semibold text-[#0e7490]">+20 XP</span> per question. Practice daily to raise your streak!
                     </p>
@@ -180,7 +180,7 @@ export default function GamifiedDashboard() {
 
             {/* Badges Section */}
             <div className="pt-6 border-t border-slate-100 mt-6">
-              <h4 className="text-sm font-bold text-slate-900 mb-4">Your Achievements</h4>
+              <h4 className="text-sm font-bold text-[#111827] mb-4">Your Achievements</h4>
               <div className="flex flex-wrap gap-4">
                 {Object.values(BADGES).map((badge) => {
                   const unlocked = profile.badges.includes(badge.id);
@@ -190,7 +190,7 @@ export default function GamifiedDashboard() {
                       title={`${badge.title}: ${badge.description}`}
                       className={`group relative flex items-center space-x-2 px-3 py-2 rounded-2xl border transition-all ${
                         unlocked
-                          ? "bg-gradient-to-br from-gold/5 to-cyan/5 border-gold/30 text-slate-900 shadow-sm"
+                          ? "bg-gradient-to-br from-gold/5 to-cyan/5 border-gold/30 text-[#111827] shadow-sm"
                           : "bg-slate-50 border-slate-200/60 text-gray-500 select-none"
                       }`}
                     >

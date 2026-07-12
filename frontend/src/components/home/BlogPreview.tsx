@@ -161,7 +161,7 @@ export default function BlogPreview() {
                         </span>
                       </div>
 
-                      <h3 className="text-lg font-bold text-slate-900 line-clamp-2 group-hover:text-cyan transition-colors leading-snug">
+                      <h3 className="text-lg font-bold text-[#111827] line-clamp-2 group-hover:text-cyan transition-colors leading-snug">
                         {post.title}
                       </h3>
 

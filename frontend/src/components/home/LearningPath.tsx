@@ -181,7 +181,7 @@ export default function LearningPath() {
                     }`}>
                       {selectedStage.tag}
                     </span>
-                    <h3 className="text-2xl font-bold text-slate-900 mt-3">{selectedStage.title}</h3>
+                    <h3 className="text-2xl font-bold text-[#111827] mt-3">{selectedStage.title}</h3>
                     <p className="text-sm font-semibold text-[#b45309] mt-1">{selectedStage.subtitle}</p>
                   </div>
                   
