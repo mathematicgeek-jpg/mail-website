@@ -49,7 +49,7 @@ export default function GamifiedDashboard() {
   };
 
   return (
-    <section id="profile-dashboard" className="py-16 bg-slate-900/40 relative">
+    <section id="profile-dashboard" className="py-20 bg-slate-900 border-y border-slate-200/60 relative">
       <div className="absolute top-[30%] left-[20%] w-[20rem] h-[20rem] bg-cyan/5 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-[30%] right-[20%] w-[20rem] h-[20rem] bg-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
       

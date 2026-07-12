@@ -48,7 +48,7 @@ export default function Home() {
         <Testimonials />
         
         {/* Contact Form Section */}
-        <section id="contact" className="py-24 bg-slate-950/60 relative">
+        <section id="contact" className="py-24 bg-slate-900 border-y border-slate-200/60 relative">
           <div className="absolute top-[-10%] right-[-10%] w-[30rem] h-[30rem] bg-cyan/5 rounded-full blur-[100px] pointer-events-none"></div>
           <div className="absolute bottom-[-10%] left-[-10%] w-[30rem] h-[30rem] bg-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
           

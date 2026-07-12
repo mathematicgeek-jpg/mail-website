@@ -25,7 +25,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-slate-950/40 relative">
+    <section id="about" className="py-24 bg-slate-900 border-y border-slate-200/60 relative">
       {/* Glow decorations */}
       <div className="absolute top-[30%] right-[-10%] w-96 h-96 bg-cyan/5 rounded-full blur-[120px] pointer-events-none"></div>
 

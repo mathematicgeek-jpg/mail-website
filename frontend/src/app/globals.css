@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4f8fc; /* Premium light slate-blue background, matching logo rings */
-  --foreground: #0f172a; /* Slate-900 for high text readability */
+  --background: #F9FAFB; /* Neutral Background */
+  --foreground: #111827; /* Text Primary */
   
-  --card-bg: #ffffff; /* Pure white card backgrounds */
-  --card-border: rgba(8, 145, 178, 0.12); /* Clean cyan-teal border */
+  --card-bg: #FFFFFF; /* Surface White */
+  --card-border: #E5E7EB; /* Subtle Border */
   
-  --cyan: #0891b2; /* Rich cyan-600 matching logo GEEK text */
-  --cyan-glow: rgba(8, 145, 178, 0.08);
+  --cyan: #0891b2; /* Accent Cyan */
+  --cyan-glow: rgba(8, 145, 178, 0.06);
   
-  --gold: #d97706; /* Amber-600 matching logo Aarti text */
-  --gold-glow: rgba(217, 119, 6, 0.08);
+  --gold: #d97706; /* Accent Gold */
+  --gold-glow: rgba(217, 119, 6, 0.06);
   
   --green: #059669;
   --red: #dc2626;
@@ -34,16 +34,16 @@
   --color-gray-900: var(--card-bg);
 
   /* Override dark-theme text colors to ensure high contrast in light mode */
-  --color-white: #0f172a;
-  --color-gray-100: #0f172a;
-  --color-gray-200: #1e293b;
-  --color-gray-300: #334155;
-  --color-gray-400: #475569;
-  --color-gray-500: #64748b;
-  --color-gray-600: #94a3b8;
-  --color-slate-400: #475569;
-  --color-slate-300: #334155;
-  --color-slate-200: #e2e8f0;
+  --color-white: var(--foreground);
+  --color-gray-100: var(--foreground);
+  --color-gray-200: #111827; /* Text Primary */
+  --color-gray-300: #374151; /* Slate-700 / Gray-700 */
+  --color-gray-400: #4b5563; /* Text Secondary (Highly readable, 5.4:1 contrast ratio) */
+  --color-gray-500: #6b7280; /* Neutral Muted */
+  --color-gray-600: #6b7280; /* Neutral Muted */
+  --color-slate-400: #4b5563;
+  --color-slate-300: #374151;
+  --color-slate-200: #e5e7eb; /* Border standard */
 }
 
 body {

@@ -124,7 +124,7 @@ export default function InteractiveTrick() {
   };
 
   return (
-    <section className="py-20 bg-slate-950 relative overflow-hidden">
+    <section className="py-24 bg-slate-950 relative overflow-hidden">
       {/* Background gradients */}
       <div className="absolute top-[-10%] right-[-10%] w-[30rem] h-[30rem] bg-cyan/5 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-[-10%] left-[-10%] w-[30rem] h-[30rem] bg-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
