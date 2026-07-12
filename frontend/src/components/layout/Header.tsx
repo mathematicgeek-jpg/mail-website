@@ -4,17 +4,29 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, GraduationCap, ChevronRight } from "lucide-react";
 import { SITE_METADATA } from "@/lib/constants";
+import { getGamificationProfile, GamificationProfile } from "@/lib/gamification";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [profile, setProfile] = useState<GamificationProfile | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    
+    const loadProfile = () => {
+      setProfile(getGamificationProfile());
+    };
+    loadProfile();
+    window.addEventListener("gamificationUpdate", loadProfile);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("gamificationUpdate", loadProfile);
+    };
   }, []);
 
   const navLinks = [
@@ -65,11 +77,26 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center">
+          {/* CTA & Gamification Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            {profile && (
+              <Link
+                href="/#profile-dashboard"
+                className="flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-cyan/15 text-xs font-bold hover:border-gold hover:scale-105 transition-all text-white"
+              >
+                <span className="flex items-center">
+                  🔥 <span className="ml-1 text-slate-100">{profile.streak}</span>
+                </span>
+                <span className="w-[1px] h-3 bg-slate-800"></span>
+                <span className="flex items-center text-gold">
+                  ⭐ <span className="ml-1 text-slate-100">Lvl {profile.level}</span>
+                </span>
+              </Link>
+            )}
+
             <Link
               href="/#contact"
-              className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-xs font-semibold text-white rounded-lg group bg-gradient-to-br from-cyan to-gold group-hover:from-cyan group-hover:to-gold hover:text-white focus:ring-4 focus:outline-none focus:ring-cyan-800"
+              className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-xs font-semibold text-white rounded-lg group bg-gradient-to-br from-cyan to-gold group-hover:from-cyan group-hover:to-gold hover:text-white focus:ring-4 focus:outline-none focus:ring-cyan-800"
             >
               <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 Book Free Demo <ChevronRight className="inline-block h-4 w-4 ml-1" />
@@ -106,6 +133,19 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
+          {profile && (
+            <div className="px-3 py-2 border-t border-gray-800 flex justify-between items-center text-sm font-bold text-white">
+              <span>Learning Progress:</span>
+              <div className="flex space-x-3">
+                <span className="flex items-center">
+                  🔥 <span className="ml-1 text-slate-100">{profile.streak} days</span>
+                </span>
+                <span className="flex items-center text-gold">
+                  ⭐ <span className="ml-1 text-slate-100">Lvl {profile.level}</span>
+                </span>
+              </div>
+            </div>
+          )}
           <div className="pt-4 border-t border-gray-800">
             <Link
               href="/#contact"

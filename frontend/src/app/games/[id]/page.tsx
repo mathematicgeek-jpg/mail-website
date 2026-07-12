@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import { api } from "@/lib/api";
 import { Timer, Trophy, Check, X, ArrowLeft, RefreshCw, Sparkles, Brain, Award, ShieldAlert } from "lucide-react";
+import { addXP, updateStreak, awardBadge } from "@/lib/gamification";
 
 interface QuestionType {
   id: string;
@@ -261,6 +262,20 @@ export default function GameArena({ params }: { params: Promise<{ id: string }> 
         // ignore
       }
     }
+
+    // Persist the XP and update daily streak
+    addXP(xpEarned);
+    updateStreak();
+
+    // Check achievements and award badges
+    awardBadge("geek_pioneer");
+    if (score === totalQuestions && totalQuestions > 0) {
+      awardBadge("perfect_scorer");
+    }
+    if (bestStreak >= 5) {
+      awardBadge("speed_demon");
+    }
+
     setGameState("complete");
   };
 

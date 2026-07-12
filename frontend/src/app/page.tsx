@@ -1,8 +1,12 @@
 import Header from "@/components/layout/Header";
 import Hero from "@/components/home/Hero";
-import About from "@/components/home/About";
+import GamifiedDashboard from "@/components/home/GamifiedDashboard";
+import InteractiveTrick from "@/components/home/InteractiveTrick";
+import LearningPath from "@/components/home/LearningPath";
 import Courses from "@/components/home/Courses";
+import About from "@/components/home/About";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
+import BlogPreview from "@/components/home/BlogPreview";
 import Testimonials from "@/components/home/Testimonials";
 import Faq from "@/components/home/Faq";
 import ContactForm from "@/components/home/ContactForm";
@@ -19,14 +23,26 @@ export default function Home() {
         {/* Hero Section */}
         <Hero />
         
-        {/* About Ma'am & G.R.A.F Framework */}
-        <About />
+        {/* Student Progress Hub */}
+        <GamifiedDashboard />
+        
+        {/* Vedic Speed calculation widgets */}
+        <InteractiveTrick />
+        
+        {/* Visual Learning Path Map */}
+        <LearningPath />
         
         {/* Structured Courses */}
         <Courses />
         
+        {/* About Ma'am & G.R.A.F Framework */}
+        <About />
+        
         {/* Why Choose Us */}
         <WhyChooseUs />
+        
+        {/* Recent Articles & Guides */}
+        <BlogPreview />
         
         {/* Testimonials & Results */}
         <Testimonials />
