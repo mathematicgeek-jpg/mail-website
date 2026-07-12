@@ -1,0 +1,29 @@
+# Caches and dependencies
+node_modules/
+.next/
+__pycache__/
+.ruff_cache/
+.emergent/
+
+# Environments and Secrets
+venv/
+backend/venv/
+.env
+.env.local
+.env.production
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# OS files
+.DS_Store
+*.pyc
+*.pyo
+*.pyd
+
+# Build & Test outputs
+dist/
+build/
+test_reports/
+.next/
+out/

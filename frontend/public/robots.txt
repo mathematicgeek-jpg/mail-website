@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Allow: /blog
+Allow: /games
+Allow: /vedic-math
+Allow: /math-tricks
+Allow: /topics
+
+Disallow: /admin
+Disallow: /api/
+
+Sitemap: https://mathematicsgeek.com/sitemap.xml
+Crawl-delay: 1

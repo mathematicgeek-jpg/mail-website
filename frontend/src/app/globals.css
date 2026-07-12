@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f8fc; /* Premium light slate-blue background, matching logo rings */
+  --foreground: #0f172a; /* Slate-900 for high text readability */
+  
+  --card-bg: #ffffff; /* Pure white card backgrounds */
+  --card-border: rgba(8, 145, 178, 0.12); /* Clean cyan-teal border */
+  
+  --cyan: #0891b2; /* Rich cyan-600 matching logo GEEK text */
+  --cyan-glow: rgba(8, 145, 178, 0.08);
+  
+  --gold: #d97706; /* Amber-600 matching logo Aarti text */
+  --gold-glow: rgba(217, 119, 6, 0.08);
+  
+  --green: #059669;
+  --red: #dc2626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cyan: var(--cyan);
+  --color-gold: var(--gold);
+  --color-green: var(--green);
+  --color-red: var(--red);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Override dark-theme background colors for utility classes to automatically render light theme */
+  --color-slate-950: var(--background);
+  --color-slate-900: var(--card-bg);
+  --color-gray-950: var(--background);
+  --color-gray-900: var(--card-bg);
+
+  /* Override dark-theme text colors to ensure high contrast in light mode */
+  --color-white: #0f172a;
+  --color-gray-100: #0f172a;
+  --color-gray-200: #1e293b;
+  --color-gray-300: #334155;
+  --color-gray-400: #475569;
+  --color-gray-500: #64748b;
+  --color-gray-600: #94a3b8;
+  --color-slate-400: #475569;
+  --color-slate-300: #334155;
+  --color-slate-200: #e2e8f0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Glassmorphism utility for light mode */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.glass-cyan {
+  background: rgba(240, 253, 250, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(8, 145, 178, 0.15);
+}
+
+.glass-gold {
+  background: rgba(254, 253, 237, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(217, 119, 6, 0.15);
+}
+
+/* Glow effects */
+.glow-cyan {
+  box-shadow: 0 0 20px var(--cyan-glow);
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px var(--gold-glow);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 10px var(--cyan-glow);
+}
+
+.glow-text-gold {
+  text-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 4s infinite ease-in-out;
+}
+
+/* Hide scrollbars but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
