@@ -140,7 +140,7 @@ export default function BlogPreview() {
                       <img
                         src={post.featured_image}
                         alt={post.title}
-                        className="object-cover h-full w-full opacity-90 transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
                         loading="lazy"
                       />
                       <span className="absolute top-4 left-4 bg-cyan text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm z-10">
@@ -165,7 +165,7 @@ export default function BlogPreview() {
                         {post.title}
                       </h3>
 
-                      <p className="text-xs text-slate-500 line-clamp-3 leading-relaxed mt-2">
+                      <p className="text-sm text-gray-400 line-clamp-3 leading-relaxed mt-2">
                         {post.excerpt}
                       </p>
                     </div>

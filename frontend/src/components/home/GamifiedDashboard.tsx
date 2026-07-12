@@ -170,7 +170,7 @@ export default function GamifiedDashboard() {
                   <Award className="h-5 w-5 text-gold shrink-0 mt-0.5" />
                   <div>
                     <h5 className="font-bold text-slate-900">How to earn points:</h5>
-                    <p className="text-slate-500 mt-1 leading-relaxed">
+                    <p className="text-gray-400 mt-1 leading-relaxed">
                       Completing math tricks solver gives <span className="font-semibold text-cyan">+15 XP</span>. Answering interactive games correctly grants <span className="font-semibold text-cyan">+20 XP</span> per question. Practice daily to raise your streak!
                     </p>
                   </div>
@@ -191,7 +191,7 @@ export default function GamifiedDashboard() {
                       className={`group relative flex items-center space-x-2 px-3 py-2 rounded-2xl border transition-all ${
                         unlocked
                           ? "bg-gradient-to-br from-gold/5 to-cyan/5 border-gold/30 text-slate-900 shadow-sm"
-                          : "bg-slate-50 border-slate-200/60 text-slate-400 opacity-50 select-none"
+                          : "bg-slate-50 border-slate-200/60 text-gray-500 select-none"
                       }`}
                     >
                       <span className="text-lg">{badge.icon}</span>

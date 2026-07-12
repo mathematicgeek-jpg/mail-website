@@ -198,13 +198,13 @@ export default function LearningPath() {
                   </div>
                 </div>
 
-                <p className="text-sm text-slate-500 leading-relaxed mb-6">
+                <p className="text-sm text-gray-400 leading-relaxed mb-6">
                   {selectedStage.description}
                 </p>
 
                 {/* Benefits checklist */}
                 <div className="space-y-3">
-                  <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">
+                  <span className="text-xs font-bold text-gray-400 uppercase tracking-widest block mb-1">
                     Key Outcomes:
                   </span>
                   {selectedStage.benefits.map((benefit, i) => (
