@@ -55,7 +55,7 @@ export default function Header() {
             </div>
             <div>
               <span className="font-bold text-lg md:text-xl tracking-tight bg-gradient-to-r from-[#0f172a] via-[#0891b2] to-[#d97706] bg-clip-text text-transparent">
-                Aarti Math Geeks
+                Mathematics Geeks
               </span>
               <span className="block text-[10px] text-gold font-semibold uppercase tracking-widest">
                 Merit Score Expert

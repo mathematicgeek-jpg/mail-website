@@ -21,7 +21,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-[#0f172a] via-[#0891b2] to-[#d97706] bg-clip-text text-transparent">
-                  Aarti Math Geeks
+                  Mathematics Geeks
                 </span>
                 <span className="block text-[9px] text-gold font-semibold tracking-widest uppercase">
                   Merit Score Expert
