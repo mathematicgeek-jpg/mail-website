@@ -7,7 +7,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import { api } from "@/lib/api";
-import { Timer, Trophy, Check, X, ArrowLeft, RefreshCw, Sparkles, Brain, Award, ShieldAlert } from "lucide-react";
+import { Timer, Trophy, Check, X, ArrowLeft, RefreshCw, Sparkles, Brain, Award, ShieldAlert, Loader2 } from "lucide-react";
 import { addXP, updateStreak, awardBadge } from "@/lib/gamification";
 
 interface QuestionType {
