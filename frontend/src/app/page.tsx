@@ -5,6 +5,7 @@ import InteractiveTrick from "@/components/home/InteractiveTrick";
 import LearningPath from "@/components/home/LearningPath";
 import Courses from "@/components/home/Courses";
 import About from "@/components/home/About";
+import ClassGallery from "@/components/home/ClassGallery";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import BlogPreview from "@/components/home/BlogPreview";
 import Testimonials from "@/components/home/Testimonials";
@@ -37,6 +38,9 @@ export default function Home() {
         
         {/* About Ma'am & G.R.A.F Framework */}
         <About />
+        
+        {/* Learning Environment Gallery */}
+        <ClassGallery />
         
         {/* Why Choose Us */}
         <WhyChooseUs />

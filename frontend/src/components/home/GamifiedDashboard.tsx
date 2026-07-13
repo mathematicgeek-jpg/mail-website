@@ -61,7 +61,7 @@ export default function GamifiedDashboard() {
             <span>Interactive Student Hub</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-            Your Math Geek Dashboard
+            Your Math Geeks Dashboard
           </h2>
           <p className="text-sm text-gray-400 mt-2">
             Practice daily, earn experience points (XP), and unlock badges like a true math champion!

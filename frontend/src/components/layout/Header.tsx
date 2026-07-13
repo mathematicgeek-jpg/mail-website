@@ -51,11 +51,11 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative flex items-center justify-center bg-[#ffffff] p-1 rounded-full shadow-sm border border-cyan/10">
-              <img src="/logo.png" alt="Aarti Mathematics Geek Logo" className="h-10 w-10 object-contain transition-transform group-hover:scale-105" />
+              <img src="/logo.png" alt="Aarti Mathematics Geeks Logo" className="h-10 w-10 object-contain transition-transform group-hover:scale-105" />
             </div>
             <div>
               <span className="font-bold text-lg md:text-xl tracking-tight bg-gradient-to-r from-[#0f172a] via-[#0891b2] to-[#d97706] bg-clip-text text-transparent">
-                Aarti Math Geek
+                Aarti Math Geeks
               </span>
               <span className="block text-[10px] text-gold font-semibold uppercase tracking-widest">
                 Merit Score Expert

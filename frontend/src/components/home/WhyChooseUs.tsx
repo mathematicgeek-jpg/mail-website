@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Why Choose Aarti Mathematics Geek?
+            Why Choose Aarti Mathematics Geeks?
           </h2>
           <p className="text-gray-400 text-sm md:text-base">
             6 core pillars that make us the preferred choice for math tutoring among parents and students.

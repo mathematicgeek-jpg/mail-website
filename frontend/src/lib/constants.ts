@@ -1,7 +1,8 @@
 export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 export const SITE_METADATA = {
-  title: "Mathematics Geek | Merit Score Expert & Vedic Math Coaching",
+  title: "Mathematics Geeks | Merit Score Expert & Vedic Math Coaching",
+  siteName: "Mathematics Geeks",
   description: "Expert math coaching for Classes 6-12 (CBSE, ICSE, IB, GCSE, Oxford). Master speed math, Vedic Math tricks, and score 95%+ in board exams with Aarti Agarwal.",
   phone: "+919639351708",
   whatsapp: "919639351708",

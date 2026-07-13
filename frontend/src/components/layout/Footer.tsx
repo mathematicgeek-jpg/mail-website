@@ -17,11 +17,11 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-3">
               <div className="bg-[#ffffff] p-1 rounded-full border border-cyan/10">
-                <img src="/logo.png" alt="Aarti Mathematics Geek Logo" className="h-8 w-8 object-contain" />
+                <img src="/logo.png" alt="Aarti Mathematics Geeks Logo" className="h-8 w-8 object-contain" />
               </div>
               <div>
                 <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-[#0f172a] via-[#0891b2] to-[#d97706] bg-clip-text text-transparent">
-                  Aarti Math Geek
+                  Aarti Math Geeks
                 </span>
                 <span className="block text-[9px] text-gold font-semibold tracking-widest uppercase">
                   Merit Score Expert
