@@ -72,8 +72,8 @@ async def create_game_session(template_id: str, player_name: str = "Anonymous") 
         "completed_at": None,
     }
 
-    await db.game_sessions.insert_one({**session, "_id": None})
-    # Remove _id before returning
+    await db.game_sessions.insert_one(session.copy())
+    # Remove _id if it was added by PyMongo
     session.pop("_id", None)
 
     return session

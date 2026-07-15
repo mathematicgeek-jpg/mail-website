@@ -35,8 +35,10 @@ export default function Header() {
     { name: "Courses", href: "/#courses" },
     { name: "Games Hub", href: "/games" },
     { name: "Blog", href: "/blog" },
+    { name: "Profile", href: "/profile" },
     { name: "Contact", href: "/#contact" },
   ];
+
 
   return (
     <header
@@ -81,7 +83,7 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             {profile && (
               <Link
-                href="/#profile-dashboard"
+                href="/profile"
                 className="flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-xs font-bold hover:border-gold hover:scale-105 transition-all text-[#111827]"
               >
                 <span className="flex items-center">

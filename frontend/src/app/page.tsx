@@ -1,7 +1,7 @@
 import Header from "@/components/layout/Header";
 import Hero from "@/components/home/Hero";
-import GamifiedDashboard from "@/components/home/GamifiedDashboard";
-import InteractiveTrick from "@/components/home/InteractiveTrick";
+
+import VedicMathGame from "@/components/home/VedicMathGame";
 import LearningPath from "@/components/home/LearningPath";
 import Courses from "@/components/home/Courses";
 import About from "@/components/home/About";
@@ -24,11 +24,10 @@ export default function Home() {
         {/* Hero Section */}
         <Hero />
         
-        {/* Student Progress Hub */}
-        <GamifiedDashboard />
+
         
-        {/* Vedic Speed calculation widgets */}
-        <InteractiveTrick />
+        {/* Interactive Vedic Math Game (Lead Magnet) */}
+        <VedicMathGame />
         
         {/* Visual Learning Path Map */}
         <LearningPath />
