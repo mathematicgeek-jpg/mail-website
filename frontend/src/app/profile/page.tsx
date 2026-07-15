@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import ProfileAuthWrapper from "@/components/profile/ProfileAuthWrapper";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
@@ -12,6 +14,7 @@ import {
 } from "lucide-react";
 
 export default function ProfilePage() {
+  const router = useRouter();
   const [playerName, setPlayerName] = useState("");
   const [sessionHash, setSessionHash] = useState<string | null>(null);
   
@@ -26,9 +29,12 @@ export default function ProfilePage() {
       const storedHash = localStorage.getItem("mg_session_hash");
       
       if (storedName) setPlayerName(storedName);
-      if (storedHash) setSessionHash(storedHash);
+      if (storedHash) {
+        setSessionHash(storedHash);
+        setIsEnrolled(true);
+      }
     }
-  }, []);
+  }, [router]);
 
   const handleLogout = () => {
     if (typeof window !== "undefined") {
@@ -45,7 +51,7 @@ export default function ProfilePage() {
   ];
 
   return (
-    <>
+    <ProfileAuthWrapper>
       <Header />
 
       <main className="flex-grow pt-28 pb-24 bg-slate-50 min-h-screen relative font-sans">
@@ -275,6 +281,6 @@ export default function ProfilePage() {
 
       <Footer />
       <WhatsAppButton />
-    </>
+    </ProfileAuthWrapper>
   );
 }
