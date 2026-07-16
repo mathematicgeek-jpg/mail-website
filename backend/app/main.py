@@ -13,7 +13,7 @@ from app.database import connect_db, close_db
 from app.services.game_engine import seed_default_templates
 
 # Import routers
-from app.routes import auth, inquiries, testimonials, blog, games, questions, whatsapp, seo
+from app.routes import auth, inquiries, testimonials, blog, games, questions, whatsapp, seo, users
 
 # Configure logging
 logging.basicConfig(
@@ -63,6 +63,7 @@ app.include_router(games.router)
 app.include_router(questions.router)
 app.include_router(whatsapp.router)
 app.include_router(seo.router)
+app.include_router(users.router)
 
 
 @app.get("/api")

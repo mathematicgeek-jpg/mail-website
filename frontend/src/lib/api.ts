@@ -226,6 +226,42 @@ export const api = {
     });
   },
 
+  studentLogin: async (credentials: any) => {
+    return request<any>("/api/auth/student/login", {
+      method: "POST",
+      body: JSON.stringify(credentials),
+    });
+  },
+
+  // Users / Students
+  fetchUsers: async () => {
+    return request<any[]>("/api/users", {
+      headers: getAuthHeaders(),
+    });
+  },
+
+  createUser: async (data: any) => {
+    return request<any>("/api/users", {
+      method: "POST",
+      headers: getAuthHeaders(),
+      body: JSON.stringify(data),
+    });
+  },
+
+  updateUser: async (id: string, data: any) => {
+    return request<any>(`/api/users/${id}`, {
+      method: "PUT",
+      headers: getAuthHeaders(),
+      body: JSON.stringify(data),
+    });
+  },
+
+  fetchCurrentUser: async () => {
+    return request<any>("/api/users/me", {
+      headers: getAuthHeaders(),
+    });
+  },
+
   fetchDashboardStats: async () => {
     return request<any>("/api/admin/dashboard-stats", {
       headers: getAuthHeaders(),

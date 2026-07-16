@@ -18,7 +18,7 @@ export default function AdminDashboard() {
   const [authLoading, setAuthLoading] = useState(false);
 
   // Tab State
-  const [activeTab, setActiveTab] = useState<"inquiries" | "testimonials" | "blogs">("inquiries");
+  const [activeTab, setActiveTab] = useState<"inquiries" | "students" | "testimonials" | "blogs">("inquiries");
   const [loadingData, setLoadingData] = useState(false);
 
   // Dashboard Stats
@@ -31,8 +31,21 @@ export default function AdminDashboard() {
 
   // Data lists
   const [inquiries, setInquiries] = useState<any[]>([]);
+  const [students, setStudents] = useState<any[]>([]);
   const [testimonials, setTestimonials] = useState<any[]>([]);
   const [blogs, setBlogs] = useState<any[]>([]);
+
+  // Student creation form
+  const [studentForm, setStudentForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    password: "",
+    studentClass: "",
+    board: "",
+  });
+  const [studentSuccess, setStudentSuccess] = useState(false);
+  const [studentError, setStudentError] = useState("");
 
   // Blog creation form
   const [blogForm, setBlogForm] = useState({
@@ -91,6 +104,9 @@ export default function AdminDashboard() {
       if (activeTab === "inquiries") {
         const data = await api.fetchInquiries();
         setInquiries(data);
+      } else if (activeTab === "students") {
+        const data = await api.fetchUsers();
+        setStudents(data);
       } else if (activeTab === "testimonials") {
         const data = await api.fetchTestimonials(false);
         setTestimonials(data);
@@ -118,6 +134,10 @@ export default function AdminDashboard() {
       setInquiries([
         { id: "i1", name: "Suresh Gupta", phone: "+91 98765 43210", studentClass: "Class 10", board: "CBSE", preferredMode: "Online Live Sessions", status: "pending", created_at: new Date().toISOString() },
         { id: "i2", name: "Neha Sharma", phone: "+91 87654 32109", studentClass: "Class 8", board: "ICSE", preferredMode: "Offline Home Tuitions", status: "contacted", created_at: new Date().toISOString() },
+      ]);
+    } else if (activeTab === "students") {
+      setStudents([
+        { id: "s1", name: "Test Student", email: "test@example.com", phone: "+91 0000000000", student_class: "Class 10", board: "CBSE", role: "student", status: "active", created_at: new Date().toISOString() }
       ]);
     } else if (activeTab === "testimonials") {
       setTestimonials([
@@ -174,6 +194,20 @@ export default function AdminDashboard() {
       loadDashboardData();
     } catch (err) {
       setTestimonials(prev => prev.filter(item => item.id !== id));
+    }
+  };
+
+  const handleCreateStudent = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStudentError("");
+    setStudentSuccess(false);
+    try {
+      await api.createUser(studentForm);
+      setStudentSuccess(true);
+      setStudentForm({ name: "", email: "", phone: "", password: "", studentClass: "", board: "" });
+      loadDashboardData();
+    } catch (err: any) {
+      setStudentError(err.message || "Failed to create student.");
     }
   };
 
@@ -328,7 +362,7 @@ export default function AdminDashboard() {
 
               {/* Navigation Tabs */}
               <div className="flex border-b border-gray-800">
-                {(["inquiries", "testimonials", "blogs"] as const).map((tab) => (
+                {(["inquiries", "students", "testimonials", "blogs"] as const).map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
@@ -397,6 +431,95 @@ export default function AdminDashboard() {
                           ))}
                         </tbody>
                       </table>
+                    </div>
+                  )}
+
+                  {/* STUDENTS TAB */}
+                  {activeTab === "students" && (
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                      {/* Left: list */}
+                      <div className="lg:col-span-2 glass p-6 rounded-2xl border border-cyan/10 overflow-x-auto h-fit">
+                        <h3 className="text-sm font-bold text-white uppercase tracking-wider text-cyan mb-4">
+                          Enrolled Students
+                        </h3>
+                        <table className="w-full text-left text-xs sm:text-sm">
+                          <thead>
+                            <tr className="border-b border-gray-800 text-gray-500 uppercase text-[10px] font-bold tracking-wider">
+                              <th className="py-3 px-4">Name</th>
+                              <th className="py-3 px-4">Contact</th>
+                              <th className="py-3 px-4">Class/Board</th>
+                              <th className="py-3 px-4">Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {students.map((s) => (
+                              <tr key={s.id} className="border-b border-gray-900 hover:bg-slate-900/40">
+                                <td className="py-3.5 px-4 font-bold text-white">{s.name}</td>
+                                <td className="py-3.5 px-4 text-gray-400">
+                                  {s.email}<br/><span className="text-[10px]">{s.phone}</span>
+                                </td>
+                                <td className="py-3.5 px-4 text-gray-400">{s.student_class} | {s.board}</td>
+                                <td className="py-3.5 px-4">
+                                  <span className={`px-2 py-1 rounded text-xs font-semibold ${s.status === 'active' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-gray-800 text-gray-400'}`}>
+                                    {s.status}
+                                  </span>
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+
+                      {/* Right: create form */}
+                      <div className="lg:col-span-1 glass-cyan p-6 rounded-2xl border border-cyan/15 space-y-6">
+                        <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center">
+                          <PlusCircle className="h-5 w-5 text-cyan mr-2" />
+                          Enroll New Student
+                        </h3>
+                        
+                        {studentSuccess && (
+                          <div className="text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-2 rounded-lg text-xs">
+                            Student enrolled successfully!
+                          </div>
+                        )}
+                        {studentError && (
+                          <div className="text-red bg-red/10 border border-red/20 px-3 py-2 rounded-lg text-xs">
+                            {studentError}
+                          </div>
+                        )}
+
+                        <form onSubmit={handleCreateStudent} className="space-y-4">
+                          <div>
+                            <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Full Name</label>
+                            <input required type="text" value={studentForm.name} onChange={(e) => setStudentForm({...studentForm, name: e.target.value})} className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan" />
+                          </div>
+                          <div>
+                            <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Email Address</label>
+                            <input required type="email" value={studentForm.email} onChange={(e) => setStudentForm({...studentForm, email: e.target.value})} className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan" />
+                          </div>
+                          <div>
+                            <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Phone Number</label>
+                            <input required type="tel" value={studentForm.phone} onChange={(e) => setStudentForm({...studentForm, phone: e.target.value})} className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan" />
+                          </div>
+                          <div>
+                            <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Initial Password</label>
+                            <input required type="text" value={studentForm.password} onChange={(e) => setStudentForm({...studentForm, password: e.target.value})} className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan" />
+                          </div>
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Class</label>
+                              <input required type="text" value={studentForm.studentClass} onChange={(e) => setStudentForm({...studentForm, studentClass: e.target.value})} className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan" placeholder="Class 10" />
+                            </div>
+                            <div>
+                              <label className="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-2">Board</label>
+                              <input required type="text" value={studentForm.board} onChange={(e) => setStudentForm({...studentForm, board: e.target.value})} className="w-full bg-slate-950 border border-cyan/15 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-cyan" placeholder="CBSE" />
+                            </div>
+                          </div>
+                          <button type="submit" className="w-full py-2.5 rounded-lg bg-gradient-to-r from-cyan to-gold text-slate-950 text-xs font-bold hover:opacity-90">
+                            Create Account
+                          </button>
+                        </form>
+                      </div>
                     </div>
                   )}
 
